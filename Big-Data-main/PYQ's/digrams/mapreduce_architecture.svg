@@ -1,0 +1,82 @@
+<svg viewBox="0 0 740 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="740" height="400" fill="#f8fafc" rx="12"/>
+  <text x="370" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e293b">MapReduce Architecture</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Input -->
+  <rect x="10" y="60" width="90" height="50" fill="#1e40af" rx="6"/>
+  <text x="55" y="80" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Input</text>
+  <text x="55" y="98" text-anchor="middle" font-size="9" fill="#bfdbfe">Large Dataset</text>
+
+  <!-- Arrow -->
+  <line x1="100" y1="85" x2="118" y2="85" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Input Splitting -->
+  <rect x="120" y="60" width="100" height="50" fill="#2563eb" rx="6"/>
+  <text x="170" y="80" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Input</text>
+  <text x="170" y="95" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Splitting</text>
+
+  <!-- Arrow -->
+  <line x1="220" y1="85" x2="238" y2="85" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Mapping phase -->
+  <rect x="240" y="40" width="120" height="200" fill="#7c3aed" rx="8" opacity="0.9"/>
+  <text x="300" y="62" text-anchor="middle" font-size="12" font-weight="bold" fill="white">MAP PHASE</text>
+  <rect x="255" y="72" width="90" height="30" fill="#5b21b6" rx="4"/>
+  <text x="300" y="91" text-anchor="middle" font-size="10" fill="#ddd6fe">Mapper 1</text>
+  <rect x="255" y="112" width="90" height="30" fill="#5b21b6" rx="4"/>
+  <text x="300" y="131" text-anchor="middle" font-size="10" fill="#ddd6fe">Mapper 2</text>
+  <rect x="255" y="152" width="90" height="30" fill="#5b21b6" rx="4"/>
+  <text x="300" y="171" text-anchor="middle" font-size="10" fill="#ddd6fe">Mapper 3</text>
+  <text x="300" y="215" text-anchor="middle" font-size="9" fill="#c4b5fd">Output: (key,value)</text>
+  <text x="300" y="228" text-anchor="middle" font-size="9" fill="#c4b5fd">pairs</text>
+
+  <!-- Arrow -->
+  <line x1="360" y1="140" x2="378" y2="140" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Shuffle & Sort -->
+  <rect x="380" y="95" width="110" height="90" fill="#b45309" rx="8"/>
+  <text x="435" y="118" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Shuffle &amp;</text>
+  <text x="435" y="133" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Sort</text>
+  <text x="435" y="155" text-anchor="middle" font-size="9" fill="#fde68a">Groups all values</text>
+  <text x="435" y="170" text-anchor="middle" font-size="9" fill="#fde68a">by same key</text>
+
+  <!-- Arrow -->
+  <line x1="490" y1="140" x2="508" y2="140" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Reduce Phase -->
+  <rect x="510" y="40" width="120" height="200" fill="#059669" rx="8" opacity="0.9"/>
+  <text x="570" y="62" text-anchor="middle" font-size="12" font-weight="bold" fill="white">REDUCE PHASE</text>
+  <rect x="525" y="72" width="90" height="30" fill="#065f46" rx="4"/>
+  <text x="570" y="91" text-anchor="middle" font-size="10" fill="#a7f3d0">Reducer 1</text>
+  <rect x="525" y="112" width="90" height="30" fill="#065f46" rx="4"/>
+  <text x="570" y="131" text-anchor="middle" font-size="10" fill="#a7f3d0">Reducer 2</text>
+  <rect x="525" y="152" width="90" height="30" fill="#065f46" rx="4"/>
+  <text x="570" y="171" text-anchor="middle" font-size="10" fill="#a7f3d0">Reducer 3</text>
+  <text x="570" y="215" text-anchor="middle" font-size="9" fill="#6ee7b7">Aggregates values</text>
+  <text x="570" y="228" text-anchor="middle" font-size="9" fill="#6ee7b7">per key</text>
+
+  <!-- Arrow -->
+  <line x1="630" y1="140" x2="648" y2="140" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Output -->
+  <rect x="650" y="110" width="80" height="60" fill="#dc2626" rx="6"/>
+  <text x="690" y="134" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Output</text>
+  <text x="690" y="152" text-anchor="middle" font-size="9" fill="#fecaca">Written to</text>
+  <text x="690" y="164" text-anchor="middle" font-size="9" fill="#fecaca">HDFS</text>
+
+  <!-- Job Tracker / Resource Manager note -->
+  <rect x="10" y="280" width="720" height="100" fill="#e2e8f0" rx="8"/>
+  <text x="370" y="302" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">Key Components</text>
+  <text x="60" y="326" font-size="11" fill="#334155">• JobTracker (Master): Schedules jobs, monitors TaskTrackers</text>
+  <text x="60" y="346" font-size="11" fill="#334155">• TaskTracker (Slave): Runs Map &amp; Reduce tasks on each node</text>
+  <text x="60" y="366" font-size="11" fill="#334155">• Combiner: Optional local reducer to minimize data transfer (between Map and Shuffle)</text>
+  <text x="400" y="326" font-size="11" fill="#334155">• Partitioner: Decides which reducer gets which key</text>
+  <text x="400" y="346" font-size="11" fill="#334155">• RecordReader: Reads input splits for mapper</text>
+  <text x="400" y="366" font-size="11" fill="#334155">• OutputFormat: Writes final output to HDFS</text>
+</svg>

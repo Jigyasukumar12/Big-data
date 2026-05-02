@@ -1,0 +1,78 @@
+<svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="720" height="420" fill="#f8fafc" rx="12"/>
+  <text x="360" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e293b">Types of NoSQL Databases</text>
+
+  <!-- Key-Value Store -->
+  <rect x="20" y="50" width="320" height="155" fill="#eff6ff" rx="10" stroke="#2563eb" stroke-width="2"/>
+  <rect x="20" y="50" width="320" height="36" fill="#2563eb" rx="10"/>
+  <rect x="20" y="72" width="320" height="14" fill="#2563eb"/>
+  <text x="180" y="74" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Key-Value Store</text>
+  <text x="35" y="106" font-size="11" fill="#1e40af">Structure: Simple dictionary (key → value)</text>
+  <text x="35" y="124" font-size="11" fill="#1e40af">Examples: Redis, DynamoDB, Riak, Memcached</text>
+  <text x="35" y="142" font-size="11" fill="#1e40af">Use case: Session cache, shopping cart, leaderboard</text>
+  <text x="35" y="160" font-size="11" fill="#1e40af">Strength: Extremely fast (O(1) lookup)</text>
+
+  <!-- Visual KV -->
+  <rect x="35" y="172" width="55" height="24" fill="#2563eb" rx="3"/>
+  <text x="62" y="188" text-anchor="middle" font-size="10" fill="white">user:101</text>
+  <rect x="100" y="172" width="80" height="24" fill="#bfdbfe" rx="3"/>
+  <text x="140" y="188" text-anchor="middle" font-size="10" fill="#1e40af">{"name":"Raj"}</text>
+  <text x="95" y="188" font-size="14" fill="#475569">→</text>
+
+  <!-- Document Store -->
+  <rect x="380" y="50" width="320" height="155" fill="#f0fdf4" rx="10" stroke="#059669" stroke-width="2"/>
+  <rect x="380" y="50" width="320" height="36" fill="#059669" rx="10"/>
+  <rect x="380" y="72" width="320" height="14" fill="#059669"/>
+  <text x="540" y="74" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Document Store</text>
+  <text x="395" y="106" font-size="11" fill="#065f46">Structure: JSON/BSON documents, nested</text>
+  <text x="395" y="124" font-size="11" fill="#065f46">Examples: MongoDB, CouchDB, Elasticsearch</text>
+  <text x="395" y="142" font-size="11" fill="#065f46">Use case: E-commerce, CMS, product catalog</text>
+  <text x="395" y="160" font-size="11" fill="#065f46">Strength: Flexible schema, rich queries</text>
+
+  <!-- Visual Doc -->
+  <rect x="395" y="172" width="280" height="24" fill="#bbf7d0" rx="3"/>
+  <text x="535" y="188" text-anchor="middle" font-size="10" fill="#065f46">{ _id:1, name:"Raj", orders:[{id:5,amt:200}] }</text>
+
+  <!-- Column Family -->
+  <rect x="20" y="225" width="320" height="165" fill="#fff7ed" rx="10" stroke="#b45309" stroke-width="2"/>
+  <rect x="20" y="225" width="320" height="36" fill="#b45309" rx="10"/>
+  <rect x="20" y="247" width="320" height="14" fill="#b45309"/>
+  <text x="180" y="249" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Column-Family Store</text>
+  <text x="35" y="281" font-size="11" fill="#92400e">Structure: Rows with column families (sparse)</text>
+  <text x="35" y="299" font-size="11" fill="#92400e">Examples: HBase, Cassandra, Google Bigtable</text>
+  <text x="35" y="317" font-size="11" fill="#92400e">Use case: IoT, time-series, analytics</text>
+  <text x="35" y="335" font-size="11" fill="#92400e">Strength: Fast writes, scalable, sparse data</text>
+  <!-- Mini table -->
+  <rect x="35" y="348" width="60" height="20" fill="#b45309" rx="2"/>
+  <text x="65" y="362" text-anchor="middle" font-size="9" fill="white">RowKey</text>
+  <rect x="100" y="348" width="80" height="20" fill="#fde68a" rx="2"/>
+  <text x="140" y="362" text-anchor="middle" font-size="9" fill="#92400e">CF: personal</text>
+  <rect x="185" y="348" width="80" height="20" fill="#fde68a" rx="2"/>
+  <text x="225" y="362" text-anchor="middle" font-size="9" fill="#92400e">CF: scores</text>
+  <text x="35" y="382" font-size="9" fill="#92400e">user_101  → name,age,city  → math,eng</text>
+
+  <!-- Graph Store -->
+  <rect x="380" y="225" width="320" height="165" fill="#fdf4ff" rx="10" stroke="#7c3aed" stroke-width="2"/>
+  <rect x="380" y="225" width="320" height="36" fill="#7c3aed" rx="10"/>
+  <rect x="380" y="247" width="320" height="14" fill="#7c3aed"/>
+  <text x="540" y="249" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Graph Database</text>
+  <text x="395" y="281" font-size="11" fill="#5b21b6">Structure: Nodes (entities) + Edges (relations)</text>
+  <text x="395" y="299" font-size="11" fill="#5b21b6">Examples: Neo4j, Amazon Neptune, JanusGraph</text>
+  <text x="395" y="317" font-size="11" fill="#5b21b6">Use case: Social networks, fraud detection</text>
+  <text x="395" y="335" font-size="11" fill="#5b21b6">Strength: Fast traversal of relationships</text>
+  <!-- Mini graph -->
+  <circle cx="430" cy="365" r="14" fill="#7c3aed"/>
+  <text x="430" y="369" text-anchor="middle" font-size="8" fill="white">Alice</text>
+  <line x1="444" y1="365" x2="490" y2="365" stroke="#7c3aed" stroke-width="2"/>
+  <text x="467" y="358" text-anchor="middle" font-size="8" fill="#5b21b6">FRIENDS</text>
+  <circle cx="504" cy="365" r="14" fill="#7c3aed"/>
+  <text x="504" y="369" text-anchor="middle" font-size="8" fill="white">Bob</text>
+  <line x1="518" y1="365" x2="564" y2="365" stroke="#7c3aed" stroke-width="2"/>
+  <text x="541" y="358" text-anchor="middle" font-size="8" fill="#5b21b6">WORKS_AT</text>
+  <rect x="568" y="352" width="60" height="24" fill="#7c3aed" rx="4"/>
+  <text x="598" y="367" text-anchor="middle" font-size="8" fill="white">Company X</text>
+
+  <!-- Bottom label -->
+  <rect x="20" y="402" width="680" height="16" fill="#e2e8f0" rx="4"/>
+  <text x="360" y="414" text-anchor="middle" font-size="10" fill="#475569">All NoSQL types follow BASE (Basically Available, Soft state, Eventually consistent) instead of ACID</text>
+</svg>

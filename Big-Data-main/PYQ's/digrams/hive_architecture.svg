@@ -1,0 +1,83 @@
+<svg viewBox="0 0 680 460" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="680" height="460" fill="#f8fafc" rx="12"/>
+  <text x="340" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e293b">Apache HIVE Architecture</text>
+
+  <defs>
+    <marker id="harr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- User Interfaces row -->
+  <text x="340" y="58" text-anchor="middle" font-size="12" fill="#64748b" font-style="italic">User Interfaces</text>
+  <rect x="30" y="65" width="100" height="40" fill="#1e40af" rx="6"/>
+  <text x="80" y="87" text-anchor="middle" font-size="11" font-weight="bold" fill="white">CLI</text>
+  <rect x="150" y="65" width="100" height="40" fill="#1e40af" rx="6"/>
+  <text x="200" y="87" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Web UI</text>
+  <rect x="270" y="65" width="130" height="40" fill="#1e40af" rx="6"/>
+  <text x="335" y="87" text-anchor="middle" font-size="11" font-weight="bold" fill="white">JDBC / ODBC</text>
+  <rect x="420" y="65" width="100" height="40" fill="#1e40af" rx="6"/>
+  <text x="470" y="87" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Thrift</text>
+
+  <!-- Arrow down to Driver -->
+  <line x1="340" y1="105" x2="340" y2="123" stroke="#475569" stroke-width="2" marker-end="url(#harr)"/>
+
+  <!-- Driver Box -->
+  <rect x="120" y="125" width="440" height="150" fill="#7c3aed" rx="10"/>
+  <text x="340" y="148" text-anchor="middle" font-size="13" font-weight="bold" fill="white">DRIVER</text>
+
+  <!-- Internal Driver components -->
+  <rect x="135" y="158" width="90" height="45" fill="#5b21b6" rx="5"/>
+  <text x="180" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="#ddd6fe">Parser</text>
+  <text x="180" y="195" text-anchor="middle" font-size="9" fill="#c4b5fd">Parses HiveQL</text>
+
+  <line x1="225" y1="180" x2="243" y2="180" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#harr)"/>
+
+  <rect x="245" y="158" width="90" height="45" fill="#5b21b6" rx="5"/>
+  <text x="290" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="#ddd6fe">Semantic</text>
+  <text x="290" y="192" text-anchor="middle" font-size="10" fill="#ddd6fe">Analyzer</text>
+
+  <line x1="335" y1="180" x2="353" y2="180" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#harr)"/>
+
+  <rect x="355" y="158" width="90" height="45" fill="#5b21b6" rx="5"/>
+  <text x="400" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="#ddd6fe">Logical Plan</text>
+  <text x="400" y="192" text-anchor="middle" font-size="10" fill="#ddd6fe">Generator</text>
+
+  <line x1="445" y1="180" x2="463" y2="180" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#harr)"/>
+
+  <rect x="465" y="158" width="80" height="45" fill="#5b21b6" rx="5"/>
+  <text x="505" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="#ddd6fe">Optimizer</text>
+  <text x="505" y="192" text-anchor="middle" font-size="9" fill="#c4b5fd">+Executor</text>
+
+  <!-- Compiler label -->
+  <text x="340" y="228" text-anchor="middle" font-size="10" fill="#c4b5fd" font-style="italic">↑ Compiler Pipeline — converts HiveQL → MapReduce DAG ↑</text>
+  <text x="340" y="268" text-anchor="middle" font-size="10" fill="#e9d5ff">Execution Engine submits jobs to Hadoop (MapReduce / Tez / Spark)</text>
+
+  <!-- Arrows from Driver -->
+  <line x1="220" y1="275" x2="150" y2="313" stroke="#475569" stroke-width="1.5" marker-end="url(#harr)"/>
+  <line x1="340" y1="275" x2="340" y2="313" stroke="#475569" stroke-width="1.5" marker-end="url(#harr)"/>
+  <line x1="460" y1="275" x2="530" y2="313" stroke="#475569" stroke-width="1.5" marker-end="url(#harr)"/>
+
+  <!-- Metastore -->
+  <rect x="80" y="315" width="130" height="60" fill="#b45309" rx="8"/>
+  <text x="145" y="340" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Metastore</text>
+  <text x="145" y="358" text-anchor="middle" font-size="9" fill="#fde68a">Table schemas,</text>
+  <text x="145" y="372" text-anchor="middle" font-size="9" fill="#fde68a">partitions, DB info</text>
+
+  <!-- HDFS -->
+  <rect x="270" y="315" width="140" height="60" fill="#059669" rx="8"/>
+  <text x="340" y="340" text-anchor="middle" font-size="12" font-weight="bold" fill="white">HDFS</text>
+  <text x="340" y="358" text-anchor="middle" font-size="9" fill="#a7f3d0">Actual data storage</text>
+  <text x="340" y="372" text-anchor="middle" font-size="9" fill="#a7f3d0">(tables, partitions)</text>
+
+  <!-- MapReduce -->
+  <rect x="460" y="315" width="140" height="60" fill="#dc2626" rx="8"/>
+  <text x="530" y="340" text-anchor="middle" font-size="12" font-weight="bold" fill="white">MapReduce</text>
+  <text x="530" y="358" text-anchor="middle" font-size="9" fill="#fecaca">Execution engine</text>
+  <text x="530" y="372" text-anchor="middle" font-size="9" fill="#fecaca">(Tez / Spark option)</text>
+
+  <!-- Data flow note -->
+  <rect x="20" y="398" width="640" height="50" fill="#e2e8f0" rx="6"/>
+  <text x="340" y="417" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">HiveQL Query Flow</text>
+  <text x="340" y="436" text-anchor="middle" font-size="10" fill="#475569">HiveQL → Parser → Semantic Analyzer → Logical Plan → Optimizer → MR Job → HDFS Result</text>
+</svg>

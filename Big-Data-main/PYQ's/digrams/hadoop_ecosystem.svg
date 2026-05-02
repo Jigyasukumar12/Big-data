@@ -1,0 +1,74 @@
+<svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="720" height="420" fill="#f8fafc" rx="12"/>
+  <text x="360" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e293b">Hadoop Ecosystem Components</text>
+
+  <!-- Row 1: Data Ingestion Tools -->
+  <text x="80" y="60" text-anchor="middle" font-size="11" fill="#64748b">Ingestion</text>
+  <rect x="20" y="68" width="75" height="36" fill="#1e40af" rx="5"/>
+  <text x="57" y="88" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Flume</text>
+  <rect x="103" y="68" width="75" height="36" fill="#1e40af" rx="5"/>
+  <text x="140" y="88" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Sqoop</text>
+  <rect x="186" y="68" width="75" height="36" fill="#1e40af" rx="5"/>
+  <text x="223" y="88" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Kafka</text>
+
+  <!-- Row 1: Query / Processing tools -->
+  <text x="450" y="60" text-anchor="middle" font-size="11" fill="#64748b">Query / Processing</text>
+  <rect x="280" y="68" width="70" height="36" fill="#7c3aed" rx="5"/>
+  <text x="315" y="88" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Pig</text>
+  <rect x="358" y="68" width="70" height="36" fill="#7c3aed" rx="5"/>
+  <text x="393" y="88" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Hive</text>
+  <rect x="436" y="68" width="70" height="36" fill="#7c3aed" rx="5"/>
+  <text x="471" y="88" text-anchor="middle" font-size="10" font-weight="bold" fill="white">HBase</text>
+  <rect x="514" y="68" width="70" height="36" fill="#7c3aed" rx="5"/>
+  <text x="549" y="88" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Spark</text>
+  <rect x="592" y="68" width="108" height="36" fill="#7c3aed" rx="5"/>
+  <text x="646" y="88" text-anchor="middle" font-size="10" font-weight="bold" fill="white">MapReduce</text>
+
+  <!-- Arrow down -->
+  <line x1="360" y1="104" x2="360" y2="124" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- YARN Layer -->
+  <rect x="20" y="126" width="680" height="60" fill="#b45309" rx="8"/>
+  <text x="360" y="150" text-anchor="middle" font-size="14" font-weight="bold" fill="white">YARN — Yet Another Resource Negotiator</text>
+  <text x="200" y="172" text-anchor="middle" font-size="11" fill="#fde68a">ResourceManager</text>
+  <text x="360" y="172" text-anchor="middle" font-size="11" fill="#fde68a">NodeManager (per node)</text>
+  <text x="530" y="172" text-anchor="middle" font-size="11" fill="#fde68a">ApplicationMaster</text>
+
+  <!-- Arrow down -->
+  <line x1="360" y1="186" x2="360" y2="206" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- HDFS Layer -->
+  <rect x="20" y="208" width="680" height="60" fill="#059669" rx="8"/>
+  <text x="360" y="232" text-anchor="middle" font-size="14" font-weight="bold" fill="white">HDFS — Hadoop Distributed File System</text>
+  <text x="200" y="254" text-anchor="middle" font-size="11" fill="#a7f3d0">NameNode (master)</text>
+  <text x="360" y="254" text-anchor="middle" font-size="11" fill="#a7f3d0">DataNodes (slaves)</text>
+  <text x="530" y="254" text-anchor="middle" font-size="11" fill="#a7f3d0">Secondary NameNode</text>
+
+  <!-- Arrow down -->
+  <line x1="360" y1="268" x2="360" y2="288" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- Physical Layer -->
+  <rect x="20" y="290" width="680" height="50" fill="#1e293b" rx="8"/>
+  <text x="360" y="318" text-anchor="middle" font-size="13" font-weight="bold" fill="#94a3b8">Commodity Hardware Cluster (Linux servers)</text>
+
+  <!-- Side components -->
+  <rect x="20" y="360" width="100" height="40" fill="#dc2626" rx="5"/>
+  <text x="70" y="382" text-anchor="middle" font-size="10" font-weight="bold" fill="white">ZooKeeper</text>
+
+  <rect x="130" y="360" width="100" height="40" fill="#dc2626" rx="5"/>
+  <text x="180" y="382" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Oozie</text>
+
+  <rect x="240" y="360" width="100" height="40" fill="#dc2626" rx="5"/>
+  <text x="290" y="382" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Ambari</text>
+
+  <rect x="350" y="360" width="100" height="40" fill="#dc2626" rx="5"/>
+  <text x="400" y="382" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Mahout</text>
+
+  <rect x="460" y="360" width="120" height="40" fill="#dc2626" rx="5"/>
+  <text x="520" y="382" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Spark Streaming</text>
+
+  <rect x="590" y="360" width="110" height="40" fill="#dc2626" rx="5"/>
+  <text x="645" y="382" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Knox / Ranger</text>
+
+  <text x="360" y="412" text-anchor="middle" font-size="10" fill="#64748b">Management, Security &amp; Workflow tools</text>
+</svg>

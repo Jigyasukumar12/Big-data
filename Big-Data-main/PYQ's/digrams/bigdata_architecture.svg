@@ -1,0 +1,71 @@
+<svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="720" height="340" fill="#f8fafc" rx="12"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e293b">Big Data Architecture — Data Pipeline</text>
+
+  <!-- Arrows between boxes -->
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Box 1: Data Sources -->
+  <rect x="20" y="70" width="110" height="200" fill="#1e40af" rx="8"/>
+  <text x="75" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Data Sources</text>
+  <text x="75" y="120" text-anchor="middle" font-size="10" fill="#bfdbfe">Social Media</text>
+  <text x="75" y="138" text-anchor="middle" font-size="10" fill="#bfdbfe">Sensors / IoT</text>
+  <text x="75" y="156" text-anchor="middle" font-size="10" fill="#bfdbfe">Transactions</text>
+  <text x="75" y="174" text-anchor="middle" font-size="10" fill="#bfdbfe">Logs</text>
+  <text x="75" y="192" text-anchor="middle" font-size="10" fill="#bfdbfe">Clickstreams</text>
+  <text x="75" y="210" text-anchor="middle" font-size="10" fill="#bfdbfe">Enterprise DB</text>
+
+  <!-- Arrow 1 -->
+  <line x1="130" y1="170" x2="148" y2="170" stroke="#64748b" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Box 2: Ingestion -->
+  <rect x="150" y="100" width="110" height="140" fill="#7c3aed" rx="8"/>
+  <text x="205" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Ingestion</text>
+  <text x="205" y="148" text-anchor="middle" font-size="10" fill="#ddd6fe">Apache Kafka</text>
+  <text x="205" y="166" text-anchor="middle" font-size="10" fill="#ddd6fe">Flume</text>
+  <text x="205" y="184" text-anchor="middle" font-size="10" fill="#ddd6fe">Sqoop</text>
+  <text x="205" y="202" text-anchor="middle" font-size="10" fill="#ddd6fe">NiFi</text>
+
+  <!-- Arrow 2 -->
+  <line x1="260" y1="170" x2="278" y2="170" stroke="#64748b" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Box 3: Storage -->
+  <rect x="280" y="100" width="110" height="140" fill="#059669" rx="8"/>
+  <text x="335" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Storage</text>
+  <text x="335" y="148" text-anchor="middle" font-size="10" fill="#a7f3d0">HDFS</text>
+  <text x="335" y="166" text-anchor="middle" font-size="10" fill="#a7f3d0">HBase</text>
+  <text x="335" y="184" text-anchor="middle" font-size="10" fill="#a7f3d0">Cassandra</text>
+  <text x="335" y="202" text-anchor="middle" font-size="10" fill="#a7f3d0">MongoDB</text>
+
+  <!-- Arrow 3 -->
+  <line x1="390" y1="170" x2="408" y2="170" stroke="#64748b" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Box 4: Processing -->
+  <rect x="410" y="100" width="110" height="140" fill="#b45309" rx="8"/>
+  <text x="465" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Processing</text>
+  <text x="465" y="148" text-anchor="middle" font-size="10" fill="#fde68a">MapReduce</text>
+  <text x="465" y="166" text-anchor="middle" font-size="10" fill="#fde68a">Spark</text>
+  <text x="465" y="184" text-anchor="middle" font-size="10" fill="#fde68a">Pig / Hive</text>
+  <text x="465" y="202" text-anchor="middle" font-size="10" fill="#fde68a">Storm</text>
+
+  <!-- Arrow 4 -->
+  <line x1="520" y1="170" x2="538" y2="170" stroke="#64748b" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Box 5: Analytics & Viz -->
+  <rect x="540" y="70" width="160" height="200" fill="#dc2626" rx="8"/>
+  <text x="620" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Analytics &amp;</text>
+  <text x="620" y="116" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Visualization</text>
+  <text x="620" y="142" text-anchor="middle" font-size="10" fill="#fecaca">Dashboards</text>
+  <text x="620" y="160" text-anchor="middle" font-size="10" fill="#fecaca">Reports</text>
+  <text x="620" y="178" text-anchor="middle" font-size="10" fill="#fecaca">Machine Learning</text>
+  <text x="620" y="196" text-anchor="middle" font-size="10" fill="#fecaca">BI Tools</text>
+  <text x="620" y="214" text-anchor="middle" font-size="10" fill="#fecaca">Predictions</text>
+
+  <!-- Bottom note -->
+  <rect x="20" y="290" width="680" height="36" fill="#e2e8f0" rx="6"/>
+  <text x="360" y="312" text-anchor="middle" font-size="11" fill="#475569">YARN / Resource Management layer sits across Processing. Security via Kerberos, Knox, Ranger.</text>
+</svg>
