@@ -207,4 +207,3 @@
 
 ---
 
-*Prepared based on AKTU PYQ analysis 2021-22 to 2024-25 | Subject: KCS061 / BCS061*
